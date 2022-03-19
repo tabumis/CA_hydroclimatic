@@ -241,7 +241,7 @@ soim1<-indices %>%
 ## Running pixel-level Spearman correlation between the monthly SOI indices and 
 
 # Function to estimate pixel-wise Spearman correlations and p-values from raster stacks, by:
-# Abdi H. et al (2016) The El Niño - La Niña cycle and recent trends in supply and demand of net primary productivity in African drylands. Climatic Change 138, 111-125 (2016). https://doi.org/10.1007/s10584-016-1730-1
+# Abdi H. et al (2016) The El NiÃ±o - La NiÃ±a cycle and recent trends in supply and demand of net primary productivity in African drylands. Climatic Change 138, 111-125 (2016). https://doi.org/10.1007/s10584-016-1730-1
 gridcorts <- function(rasterstack, method, type=c("corel","pval","both")){
   # Values for (layers, ncell, ncol, nrow, method, crs, extent) come straight from the input raster stack
   # e.g. nlayers(rasterstack), ncell(rasterstack)... etc.
@@ -365,11 +365,11 @@ plot(spearman)
 
 # Plot of correlations significance at p=0.05
 
-m <- c(0, 0.05, 1,  0.05, Inf, 0) # reclassification condition which nulifies all p-values greater than 0.1
+m <- c(0, 0.05, 1,  0.05, Inf, 0) # reclassification condition which nulifies all p-values greater than 0.05
 rclmat <- matrix(m, ncol=3, byrow=TRUE)
 pval_binary <- reclassify(spearman[[2]], rclmat)
 
-dfr<-spearman[[1]]*pval_binary # masking out correlation coefficients across the study area, where p-value > 0.1
+dfr<-spearman[[1]]*pval_binary # masking out correlation coefficients across the study area, where p-value > 0.05
 
 {  
     cuts = c(0.6,0.5,0.4,0.3,0.2, 0.1, 0, -0.1, -0.2, -0.3, -0.4, -0.5, -0.6)
