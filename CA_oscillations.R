@@ -342,7 +342,7 @@ sp::plot(climatology,col=(jet.colors(10)), interpolate=F,
          main="Average precipitation during Feb-June season",legend.args=list(text='mm', side=4,font=1, line=2.5, cex=1.1),
          xlim = c(60, 80), ylim = c(35, 45))
 plot(region_polygons, lwd=4, add=TRUE)
-}
+} # Longterm averages of the seasonal precipitation (spatial distribution)
 
 # Now lets create a raster stack of climate oscillation indices
 
@@ -361,7 +361,7 @@ oscillation
 r_stack<-stack(MSWEP_seasonal,oscillation) # Now we combine two rasterstack files ( seasonal precipitation and oscillation indices) into a single ratserstack file  
 
 spearman<-gridcorts(rasterstack = r_stack, method = "spearman", type = "both")
-plot(spearman)
+plot(spearman) # maps of (1) correlations and p-values across the study area
 
 # Plot of correlations significance at p=0.05
 
@@ -383,7 +383,7 @@ dfr<-spearman[[1]]*pval_binary # masking out correlation coefficients across the
 ########################################################################################
 ###  3. Field significance test via False Discovery Rate (Wilks 2006)
 
-# We use the function "fdrTest" designed by  Lorenz,et al (2016), Does Amazonian deforestation cause global effects; can we be sure?, J. Geophys. Res. Atmos., 121, 5567-5584,doi:10.1002/2015JD024357.
+# We use the function "fdrTest" developed by  Lorenz,et al (2016), Does Amazonian deforestation cause global effects; can we be sure?, J. Geophys. Res. Atmos., 121, 5567-5584,doi:10.1002/2015JD024357.
 # function code is accessible at https://github.com/ruthlorenz/stat_tests_correlated_climdata/blob/master/FStests/false_discovery_rate_package.R
 # p_val = P-values at every grid point, h_val = 0 or 1 at every grid point, depending on significance level
 # K = total number of local t-test, nlon*nlat if all grid points included,
