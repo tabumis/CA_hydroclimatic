@@ -1,7 +1,9 @@
 #*******************************************************************************
 # 
-#  manuscript:   Regionalization of climate teleconnections across Central Asian
-#                mountains improves predictability of the seasonal precipitation.
+#  manuscript:   Umirbekov, A., Peña-Guerrero, M. D., & Müller, D. (2022).
+#                Regionalization of climate teleconnections across Central Asian mountains
+#                improves the predictability of seasonal precipitation. 
+#                Environmental Research Letters, 17(5), 55002. https://doi.org/10.1088/1748-9326/ac6229
 #
 #  description:  Script for 1) Calculation of long-term annual and seasonal 
 #                climatologies for the delineated precipitation subregions;
@@ -12,7 +14,7 @@
 #               
 #                compiled in R version 4.1.1, last run on March 03, 2021
 #
-#  author:       ...
+#  author:       Atabek Umirbekov
 #
 #*******************************************************************************
 
