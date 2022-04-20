@@ -1,3 +1,12 @@
+#*******************************************************************************
+# 
+#  R code and corresponding files to themanuscript:  
+#               Umirbekov, A., Peña-Guerrero, M. D., & Müller, D. (2022).
+#               Regionalization of climate teleconnections across Central Asian mountains
+#               improves the predictability of seasonal precipitation. 
+#               Environmental Research Letters, 17(5), 55002. https://doi.org/10.1088/1748-9326/ac6229
+#*******************************************************************************
+
 File "CA_oscillations.rds" contains the R script of workflow for: 
 	        1) Calculation of long-term annual and seasonal 
                 climatologies for the delineated precipitation subregions;
