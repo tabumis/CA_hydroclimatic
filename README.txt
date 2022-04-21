@@ -1,6 +1,6 @@
 #*******************************************************************************
 # 
-#  R code and corresponding files to themanuscript:  
+#  R code and corresponding files to the manuscript:  
 #               Umirbekov, A., Peña-Guerrero, M. D., & Müller, D. (2022).
 #               Regionalization of climate teleconnections across Central Asian mountains
 #               improves the predictability of seasonal precipitation. 
